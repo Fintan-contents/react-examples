@@ -1,0 +1,46 @@
+{
+  "name": "dev-react-cs-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "code-gen": "npx orval --config ./orval.config.ts",
+    "mockoon": "mockoon-cli start --data ./mockoon/mockoon_todo.json"
+  },
+  "dependencies": {
+    "@mockoon/cli": "^9.0.0",
+    "@tanstack/react-query": "^5.56.2",
+    "antd": "^5.21.0",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "next": "14.2.13",
+    "react": "^18",
+    "react-dom": "^18",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.3",
+    "@storybook/addon-interactions": "^8.3.3",
+    "@storybook/addon-links": "^8.3.3",
+    "@storybook/addon-onboarding": "^8.3.3",
+    "@storybook/blocks": "^8.3.3",
+    "@storybook/nextjs": "^8.3.3",
+    "@storybook/react": "^8.3.3",
+    "@storybook/test": "^8.3.3",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "eslint-plugin-storybook": "^0.10.1",
+    "orval": "^7.1.1",
+    "storybook": "^8.3.3",
+    "typescript": "^5"
+  }
+}

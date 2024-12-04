@@ -1,0 +1,100 @@
+{
+  "uuid": "cf8d7ab2-d373-40f8-9742-6724645d06a9",
+  "lastMigration": 32,
+  "name": "Crud mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8080,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "f9be2ddc-fd36-471c-94a7-dfb12a4c17b8",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "todos",
+      "responses": [
+        {
+          "uuid": "83edd397-f09b-4606-97e3-ccaea93819b0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "98j6",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f9be2ddc-fd36-471c-94a7-dfb12a4c17b8"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "09ea9782-a07f-40bf-bb67-6238381035c4",
+      "id": "98j6",
+      "name": "Todos",
+      "documentation": "",
+      "value": "[\r\n    {{#repeat 3}}\r\n    {{setVar 'person' (faker 'person.firstName')}}     \r\n    {\r\n      \"id\": \"{{faker 'string.uuid'}}\",\r\n      \"title\": \"{{ @person }}のタスク\",\r\n      \"description\": \"{{ @person }}のタスクの説明\",\r\n      \"assignee\": \"{{ @person}}\"\r\n    }\r\n    {{#unless @last}},{{/unless}}\r\n    {{/repeat}}\r\n]"
+    }
+  ],
+  "callbacks": []
+}
